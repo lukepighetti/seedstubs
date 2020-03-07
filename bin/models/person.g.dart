@@ -18,7 +18,6 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
     json['seenAt'] == null ? null : DateTime.parse(json['seenAt'] as String),
     json['avatar'] == null ? null : Uri.parse(json['avatar'] as String),
     json['bio'] as String,
-    json['username'] as String,
   );
 }
 
@@ -31,5 +30,4 @@ Map<String, dynamic> _$PersonToJson(Person instance) => <String, dynamic>{
       'seenAt': instance.seenAt?.toIso8601String(),
       'avatar': instance.avatar?.toString(),
       'bio': instance.bio,
-      'username': instance.username,
     };

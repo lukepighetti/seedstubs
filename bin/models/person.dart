@@ -13,7 +13,6 @@ class Person {
     this.seenAt,
     this.avatar,
     this.bio,
-    this.username,
   );
 
   final String id;
@@ -24,7 +23,6 @@ class Person {
   final DateTime seenAt;
   final Uri avatar;
   final String bio;
-  final String username;
 
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
   Map<String, dynamic> toJson() => _$PersonToJson(this);
