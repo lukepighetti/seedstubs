@@ -19,7 +19,7 @@ Message _$MessageFromJson(Map<String, dynamic> json) {
     json['userId'] as String,
     json['avatar'] == null ? null : Uri.parse(json['avatar'] as String),
     json['displayName'] as String,
-    _$enumDecodeNullable(_$StatusEnumMap, json['status']),
+    _$enumDecodeNullable(_$AvailabilityEnumMap, json['availability']),
   );
 }
 
@@ -31,7 +31,7 @@ Map<String, dynamic> _$MessageToJson(Message instance) => <String, dynamic>{
       'userId': instance.userId,
       'avatar': instance.avatar?.toString(),
       'displayName': instance.displayName,
-      'status': _$StatusEnumMap[instance.status],
+      'availability': _$AvailabilityEnumMap[instance.availability],
     };
 
 T _$enumDecode<T>(
@@ -66,8 +66,8 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$StatusEnumMap = {
-  Status.online: 'online',
-  Status.busy: 'busy',
-  Status.offline: 'offline',
+const _$AvailabilityEnumMap = {
+  Availability.online: 'online',
+  Availability.busy: 'busy',
+  Availability.offline: 'offline',
 };

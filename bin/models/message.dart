@@ -1,13 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'status.dart';
+import 'availability.dart';
 
 part 'message.g.dart';
 
 @JsonSerializable()
 class Message {
   Message(this.id, this.body, this.createdAt, this.updatedAt, this.userId,
-      this.avatar, this.displayName, this.status);
+      this.avatar, this.displayName, this.availability);
 
   final String id;
   final String body;
@@ -17,7 +17,7 @@ class Message {
   final String userId;
   final Uri avatar;
   final String displayName;
-  final Status status;
+  final Availability availability;
 
   factory Message.fromJson(Map<String, dynamic> json) =>
       _$MessageFromJson(json);
