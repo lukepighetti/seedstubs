@@ -4,13 +4,13 @@ part 'person.g.dart';
 
 @JsonSerializable()
 class Person {
-  Person(this.firstName, this.lastName, this.joinedAt, this.seenAt, this.avatar,
-      this.id, this.bio, this.username);
+  Person(this.firstName, this.lastName, this.createdAt, this.seenAt,
+      this.avatar, this.id, this.bio, this.username);
 
   final String id;
   final String firstName;
   final String lastName;
-  final DateTime joinedAt;
+  final DateTime createdAt;
   final DateTime seenAt;
   final Uri avatar;
   final String bio;

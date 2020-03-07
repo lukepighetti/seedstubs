@@ -10,9 +10,9 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
   return Person(
     json['firstName'] as String,
     json['lastName'] as String,
-    json['joinedAt'] == null
+    json['createdAt'] == null
         ? null
-        : DateTime.parse(json['joinedAt'] as String),
+        : DateTime.parse(json['createdAt'] as String),
     json['seenAt'] == null ? null : DateTime.parse(json['seenAt'] as String),
     json['avatar'] == null ? null : Uri.parse(json['avatar'] as String),
     json['id'] as String,
@@ -25,7 +25,7 @@ Map<String, dynamic> _$PersonToJson(Person instance) => <String, dynamic>{
       'id': instance.id,
       'firstName': instance.firstName,
       'lastName': instance.lastName,
-      'joinedAt': instance.joinedAt?.toIso8601String(),
+      'createdAt': instance.createdAt?.toIso8601String(),
       'seenAt': instance.seenAt?.toIso8601String(),
       'avatar': instance.avatar?.toString(),
       'bio': instance.bio,
