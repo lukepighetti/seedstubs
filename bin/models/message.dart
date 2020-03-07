@@ -6,8 +6,16 @@ part 'message.g.dart';
 
 @JsonSerializable()
 class Message {
-  Message(this.id, this.body, this.createdAt, this.updatedAt, this.userId,
-      this.avatar, this.displayName, this.availability);
+  Message(
+    this.id,
+    this.body,
+    this.createdAt,
+    this.updatedAt,
+    this.userId,
+    this.avatar,
+    this.displayName,
+    this.availability,
+  );
 
   final String id;
   final String body;

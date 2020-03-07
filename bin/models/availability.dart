@@ -1,1 +1,5 @@
-enum Availability { online, busy, offline }
+enum Availability {
+  online,
+  busy,
+  offline,
+}
